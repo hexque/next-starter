@@ -16,12 +16,14 @@
 		]
 	},
 	"dependencies": {
+		"@t3-oss/env-nextjs": "^0.13.8",
 		"husky": "^9.1.7",
 		"lint-staged": "^16.1.6",
 		"next": "15.3.5",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0",
-		"ultracite": "^5.3.4"
+		"ultracite": "^5.3.4",
+		"zod": "^4.1.8"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "2.1.1",
