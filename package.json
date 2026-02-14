@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "deps": "pnpm dlx npm-check-updates --format group",
+    "update": "pnpm deps -u"
   },
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.13.10",
