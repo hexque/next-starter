@@ -29,7 +29,11 @@
         "noLeakedRender": "off"
       },
       "style": {
-        "useConsistentTypeDefinitions": "off"
+        "useConsistentTypeDefinitions": "off",
+        "useImportType": {
+          "level": "on",
+          "options": { "style": "inlineType" }
+        }
       }
     }
   },
