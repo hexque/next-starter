@@ -7,9 +7,7 @@ export const env = createEnv({
    * isn't built with invalid env vars.
    */
   server: {
-    NODE_ENV: z
-      .enum(["development", "test", "production"])
-      .default("development"),
+    NODE_ENV: z.enum(["development", "test", "production"]).default("development")
   },
 
   /**
@@ -19,7 +17,7 @@ export const env = createEnv({
    */
   client: {
     NEXT_PUBLIC_BASE_URL: z.url(),
-    NEXT_PUBLIC_ENV: z.enum(["PROD", "DEV", "LOCAL"]).default("LOCAL"),
+    NEXT_PUBLIC_ENV: z.enum(["PROD", "DEV", "LOCAL"]).default("LOCAL")
   },
   /**
    * You can't destruct `process.env` as a regular object in the Next.js edge runtimes (e.g.
@@ -28,7 +26,7 @@ export const env = createEnv({
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_BASE_URL: process.env.NEXT_PUBLIC_BASE_URL,
-    NEXT_PUBLIC_ENV: process.env.NEXT_PUBLIC_ENV,
+    NEXT_PUBLIC_ENV: process.env.NEXT_PUBLIC_ENV
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially
@@ -39,5 +37,5 @@ export const env = createEnv({
    * Makes it so that empty strings are treated as undefined. `SOME_VAR: z.string()` and
    * `SOME_VAR=''` will throw an error.
    */
-  emptyStringAsUndefined: true,
+  emptyStringAsUndefined: true
 });
